@@ -1,0 +1,16 @@
+package com.framework.core;
+import com.microsoft.playwright.*;
+public class PlaywrightFactory {
+
+    public static Playwright createPlaywright() {
+        return Playwright.create();
+    }
+
+    public static Browser createBrowser(Playwright playwright) {
+        return playwright.chromium().launch(
+                new BrowserType.LaunchOptions()
+                        .setHeadless(false)
+        );
+    }
+
+}
