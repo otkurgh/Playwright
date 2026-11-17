@@ -1,6 +1,11 @@
 
 pipeline {
     agent any
+    environment {
+        TEST_USERNAME = 'standard_user'
+        TEST_PASSWORD = 'secret_sauce'
+    }
+
 
     stages {
 
